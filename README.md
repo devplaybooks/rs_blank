@@ -18,7 +18,7 @@ that I find useful.
 
 ## What's in the box?
 
-## [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+### [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 I start out with this one because it's the least flexible, and [adjust accordingly](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 to my needs. 
