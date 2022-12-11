@@ -93,6 +93,8 @@ I had never heard of [Miri](https://github.com/rust-lang/miri) before I saw it
 in [this example](https://github.com/dtolnay/thiserror/blob/master/.github/workflows/ci.yml),
 but it looks interesting, so why not?
 
+Miri is a heavy test, so it may be wise to remove it.
+
 **outdated**
 
 Runs the [outdated cargo subcommand](https://github.com/kbknapp/cargo-outdated)
