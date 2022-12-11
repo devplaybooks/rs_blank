@@ -8,6 +8,11 @@ provided by [cargo init](https://doc.rust-lang.org/cargo/commands/cargo-init.htm
 Rather than try to replace what it does, I just wanted a way to add the things 
 that I find useful.
 
+This template is designed to be
+[cruel to be kind in the right measure](https://www.youtube.com/watch?v=b0l3QWUXVho).
+
+You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
+
 ## How to use it. 
 
 * Use the template. (Note that your first build will fail because there is no code yet.)
@@ -18,16 +23,14 @@ that I find useful.
 
 ## What's in the box?
 
+* GPL 3.0 License
+* .rustfmt.toml file
+* GitHub Actions
+
 ### [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 I start out with this one because it's the least flexible, and [adjust accordingly](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 to my needs. 
-
-### Cron schedule to run Actions [every 1st day of the month](https://crontab.guru/#40_1_1_*_*)
-
-Note that [GitHub says](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow#article-contents)
-that it will disable scheduled workflows on forked repos or if there has been no
-activity in 60 days.
 
 ### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172).
 
@@ -41,11 +44,16 @@ characters to 100:
 max_width = 100
 ```
 
-### David Tolnay's [Rust Toolchain GitHub Action](https://github.com/dtolnay/rust-toolchain).
+### David Tolnay's [Rust Toolchain GitHub Action](https://github.com/dtolnay/rust-toolchain)
 
 I've been a big fan of [svartalf's](https://github.com/svartalf) [actions-rs libraries](https://github.com/actions-rs),
 but it doesn't seem to be maintained, and I'm getting [warnings](https://github.blog/changelog/2022-09-22-github-actions-all-actions-will-begin-running-on-node16-instead-of-node12/)
 now from GitHub, so I'm switching. It's surprisingly simple and flexible.
+
+This workflow contains a cron schedule to run [every 1st day of the month](https://crontab.guru/#40_1_1_*_*). 
+Note that [GitHub says](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow#article-contents)
+that it will disable scheduled workflows on forked repos or if there has been no
+activity in 60 days.
 
 If you're not familiar with [GitHub Actions](https://github.com/features/actions),
 I recommend that you check them out.
@@ -62,6 +70,17 @@ as well as the 1.56.0 release of Rust.
 
 I like my [Clippy lints](https://doc.rust-lang.org/clippy/) to be dialed up to 11,
 so it's configured at the pedantic level. Feel free to dial it down as you see fit.
+
+Note that if you don't add `#![warn(clippy::pedantic)]` at the beginning of your
+crate, Clippy will pass locally, but fail when you push. For example:
+
+```rust
+#![warn(clippy::pedantic)]
+
+fn main() {
+    println!("Hello, world!");
+}
+```
 
 **fmt**
 
