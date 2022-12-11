@@ -10,7 +10,7 @@ that I find useful.
 
 ## How to use it. 
 
-* Use the template. 
+* Use the template. (Note that your first build will fail because there is no code yet.)
 * Check out your new repo locally. 
 * Navigate into the repo
 * Run [cargo init](https://doc.rust-lang.org/cargo/commands/cargo-init.html)
@@ -18,7 +18,16 @@ that I find useful.
 
 ## What's in the box?
 
+## [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+I start out with this one because it's the least flexible, and [adjust accordingly](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+to my needs. 
+
 ### Cron schedule to run Actions [every 1st day of the month](https://crontab.guru/#40_1_1_*_*)
+
+Note that [GitHub says](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow#article-contents)
+that it will disable scheduled workflows on forked repos or if there has been no
+activity in 60 days.
 
 ### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172).
 
