@@ -26,6 +26,7 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 * GPL 3.0 License
 * .rustfmt.toml file
 * GitHub Actions
+* GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
 
 ### [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
@@ -58,7 +59,7 @@ activity in 60 days.
 If you're not familiar with [GitHub Actions](https://github.com/features/actions),
 I recommend that you check them out.
 
-[.github/workflows/ci.yaml](/.github/workflows/ci.yaml) contains the following jobs:
+[.github/workflows/CI.yaml](/.github/workflows/CI.yaml) contains the following jobs:
 
 **test**
 
