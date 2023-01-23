@@ -1,4 +1,4 @@
-[![Build and Test](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yml/badge.svg)](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yml)
+[![Build and Test](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yaml/badge.svg)](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yaml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -9,9 +9,10 @@
 Starting Point for Rust projects. Feel free to adapt as needed.
 
 One will notice the lack of any Rust code in this template. That is intentional.
+This is why the CI badge up above is red.
 This is a collection of supporting files that I find useful beyond what is
 provided by [cargo init](https://doc.rust-lang.org/cargo/commands/cargo-init.html).
-Rather than try to replace what it does, I just wanted a way to add the things 
+Rather than try to replace what it does, I just wanted a way to add the things
 that I find useful.
 
 This template is designed to be
@@ -19,10 +20,10 @@ This template is designed to be
 
 You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
 
-## How to use it. 
+## How to use it.
 
 * Use the template. (Note that your first build will fail because there is no code yet.)
-* Check out your new repo locally. 
+* Check out your new repo locally.
 * Navigate into the repo
 * Run [cargo init](https://doc.rust-lang.org/cargo/commands/cargo-init.html)
   * If you want a library instead of an executable, run `cargo init --lib`
@@ -52,7 +53,7 @@ I've been a big fan of [svartalf's](https://github.com/svartalf) [actions-rs lib
 but it doesn't seem to be maintained, and I'm getting [warnings](https://github.blog/changelog/2022-09-22-github-actions-all-actions-will-begin-running-on-node16-instead-of-node12/)
 now from GitHub, so I'm switching. It's surprisingly simple and flexible.
 
-This workflow contains a cron schedule to run [every 1st day of the month](https://crontab.guru/#40_1_1_*_*). 
+This workflow contains a cron schedule to run [every 1st day of the month](https://crontab.guru/#40_1_1_*_*).
 Note that [GitHub says](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow#article-contents)
 that it will disable scheduled workflows on forked repos or if there has been no
 activity in 60 days.
@@ -66,7 +67,7 @@ I recommend that you check them out.
 
 Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md),
 beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
-as well as the 1.56.0 release of Rust. 
+as well as the 1.56.0 release of Rust.
 
 **clippy**
 
@@ -80,7 +81,7 @@ crate, Clippy will pass locally, but fail when you push. For example:
 #![warn(clippy::pedantic)]
 
 fn main() {
-    println!("Hello, world!");
+  println!("Hello, world!");
 }
 ```
 
