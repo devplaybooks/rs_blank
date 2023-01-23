@@ -1,6 +1,8 @@
 [![Build and Test](https://github.com/devplaybooks/rs_blank/actions/workflows/CI.yaml/badge.svg)](https://github.com/devplaybooks/rs_blank/actions/workflows/CI.yaml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Crates.io Version](https://img.shields.io/crates/v/rs_blank_example.svg)](https://crates.io/crates/rs_blank_example)
+<!--[![Rustdocs](https://docs.rs/cardpack/badge.svg)](https://docs.rs/cardpack/)-->
 
 ---
 
