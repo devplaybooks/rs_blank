@@ -1,3 +1,9 @@
+[![Build and Test](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yml/badge.svg)](https://github.com/devplaybooks/rust_blank/actions/workflows/CI.yml)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
 # Rust Blank
 
 Starting Point for Rust projects. Feel free to adapt as needed.
@@ -23,15 +29,10 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 
 ## What's in the box?
 
-* GPL 3.0 License
+* [MIT Open Source License](https://opensource.org/licenses/MIT)
 * .rustfmt.toml file
 * GitHub Actions
 * GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
-
-### [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
-I start out with this one because it's the least flexible, and [adjust accordingly](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-to my needs. 
 
 ### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172).
 
