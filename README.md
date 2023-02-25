@@ -1,6 +1,8 @@
 [![Build and Test](https://github.com/devplaybooks/rs_blank/actions/workflows/CI.yaml/badge.svg)](https://github.com/devplaybooks/rs_blank/actions/workflows/CI.yaml)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](LICENSE-APACHE)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE-MIT)
 [![Crates.io Version](https://img.shields.io/crates/v/rs_blank_example.svg)](https://crates.io/crates/rs_blank_example)
 [![Rustdocs](https://docs.rs/rs_blank_example/badge.svg)](https://docs.rs/rs_blank_example/)
 
@@ -32,15 +34,17 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 
 ## What's in the box?
 
-* [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+* Choice of licenses:
+  * [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+  * [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+  * [MIT License](https://opensource.org/license/mit/)
 * .rustfmt.toml file
 * GitHub Actions
 * GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
 
-### [GNU General Public License Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+### Licenses
 
-I start out with this one because it's the least flexible, and [adjust accordingly](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-to my needs.
+I've added all the licenses I generally use for maximum flexibility.
 
 ### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172).
 
