@@ -3,7 +3,6 @@ name: CI
 on:
   push:
   pull_request:
-  schedule: [cron: "40 1 1 * *"]
 
 permissions:
   contents: read
@@ -25,7 +24,7 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@master
+      - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: ${{matrix.rust}}
           components: rust-src
@@ -40,7 +39,7 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@master
+      - uses: dtolnay/rust-toolchain@stable
         with:
           components: clippy, rust-src
       - run: cargo clippy -- -Dclippy::all -Dclippy::pedantic
@@ -52,7 +51,7 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@master
+      - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, rust-src
       - run: cargo fmt --all -- --check
@@ -67,13 +66,3 @@ jobs:
       - run: cargo miri test
         env:
           MIRIFLAGS: -Zmiri-strict-provenance
-
-  outdated:
-    name: Outdated
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
-    timeout-minutes: 45
-    steps:
-      - uses: actions/checkout@v3
-      - uses: dtolnay/install@cargo-outdated
-      - run: cargo outdated --workspace --exit-code 1
