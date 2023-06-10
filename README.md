@@ -82,7 +82,7 @@ as well as the 1.56.0 release of Rust.
 
 **clippy**
 
-I like my [Clippy lints](https://doc.rust-lang.org/clippy/) to be dialed up to 11,
+I like my [Clippy lints](https://doc.rust-lang.org/clippy/) to be dialed up to [11](https://www.youtube.com/watch?v=F7IZZXQ89Oc),
 so it's configured at the pedantic level. Feel free to dial it down as you see fit.
 
 Note that if you don't add `#![warn(clippy::pedantic)]` at the beginning of your
