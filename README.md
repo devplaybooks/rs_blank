@@ -39,8 +39,8 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
   * [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
   * [MIT License](https://opensource.org/license/mit/)
 * .rustfmt.toml file
-* GitHub Actions
-* GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
+* GitHub CI Actions
+* GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust) 
 
 ### Licenses
 
@@ -78,7 +78,7 @@ I recommend that you check them out.
 
 Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md),
 beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
-as well as the 1.56.0 release of Rust.
+as well as the 1.72.1 release of Rust.
 
 **clippy**
 
