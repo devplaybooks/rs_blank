@@ -26,7 +26,7 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 
 ## How to use it.
 
-* Use the template. (Note that your first build will fail because there is no code yet.)
+* Use the template. (**Note that your first build will fail because there is no code yet.**)
 * Check out your new repo locally.
 * Navigate into the repo
 * Run [cargo init](https://doc.rust-lang.org/cargo/commands/cargo-init.html)
