@@ -1,9 +1,8 @@
-FROM ubuntu:18.04
+FROM mcr.microsoft.com/devcontainers/rust:latest
 
-WORKDIR /home/
+# [Optional] Uncomment this section to install additional packages.
+#RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+#    && apt-get -y install --no-install-recommends python-is-python3
 
-COPY . .
-
-RUN bash ./setup.sh
-
-ENV PATH="/root/.cargo/bin:$PATH"
+# Add ./bin to PATH
+ENV PATH="./bin:${PATH}"
