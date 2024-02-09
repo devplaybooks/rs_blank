@@ -115,3 +115,12 @@ Runs the [outdated cargo subcommand](https://github.com/kbknapp/cargo-outdated)
 against the repo. Fails the build if you have any outdated dependencies in your
 project. If you keep the cron schedule, it will check every month to see if any
 of your dependencies are outdated. 
+
+## Rust Resources
+
+* [Rust Programming Language](https://doc.rust-lang.org/book/README.html)
+* [rustup.rs](https://github.com/rust-lang-nursery/rustup.rs)
+* [Cargo Guide](http://doc.crates.io/guide.html)
+* [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) ([git](https://github.com/rust-lang-nursery/rust-cookbook))
+* [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/index.html)
+* [The Little Book of Rust Books](https://lborb.github.io/book/)
