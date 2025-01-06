@@ -101,6 +101,11 @@ fn main() {
 Fails the build if the developer didn't run
 [rustfmt](https://github.com/rust-lang/rustfmt) against the build.
 
+**doc**
+
+Runs [`cargo doc`](https://doc.rust-lang.org/cargo/commands/cargo-doc.html) 
+on the repo and fails if there are any warnings.
+
 **miri**
 
 I had never heard of [Miri](https://github.com/rust-lang/miri) before I saw it
