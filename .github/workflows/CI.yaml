@@ -58,6 +58,20 @@ jobs:
           components: rustfmt, rust-src
       - run: cargo fmt --all -- --check
 
+  doc:
+    name: Doc
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+          components: rust-docs, rust-src
+      - run: cargo doc --no-deps --document-private-items
+        env:
+          RUSTDOCFLAGS: "-D warnings"
+
   miri:
     name: Miri
     runs-on: ubuntu-latest
