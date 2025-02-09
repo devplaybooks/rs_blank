@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# ayce
+#
+# ayce stands for "all you can eat". It's the name I give to the shell script on a
+# library or whatever that does all the things. I like to run this before I push
+# up some code, just to make sure everything is good to go.
+
+# Verbose output
+set -x
+
+cargo test
+cargo clippy
+cargo fmt
+cargo doc --no-deps
+open ./target/doc/cardpack/index.html
