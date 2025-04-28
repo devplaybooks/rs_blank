@@ -24,7 +24,7 @@ This template is designed to be
 
 You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
 
-## How to use it.
+## How to use it
 
 * Use the template. (**Note that your first build will fail because there is no code yet.**)
 * Check out your new repo locally.
@@ -40,19 +40,19 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
   * [MIT License](https://opensource.org/license/mit/)
 * .rustfmt.toml file
 * GitHub CI Actions
-* GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust) 
+* GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
 
 ### Licenses
 
 I've added all the licenses I generally use for maximum flexibility.
 
-### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172).
+### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172)
 
 It allows you to customize how the [rstfmt cargo command](https://github.com/rust-lang/rustfmt)
 does its job. In my case, that means changing the max width of a file from 80
 characters to 100:
 
-```
+```toml
 # Ideal width of each line.
 # Default: 80
 max_width = 100
@@ -74,13 +74,13 @@ I recommend that you check them out.
 
 [.github/workflows/CI.yaml](/.github/workflows/CI.yaml) contains the following jobs:
 
-**test**
+#### test
 
 Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md),
 beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
 as well as the 1.72.1 release of Rust.
 
-**clippy**
+#### clippy
 
 I like my [Clippy lints](https://doc.rust-lang.org/clippy/) to be [dialed up to 11](https://www.youtube.com/watch?v=F7IZZXQ89Oc),
 so it's configured at the pedantic level. Feel free to dial it down as you see fit.
@@ -96,17 +96,17 @@ fn main() {
 }
 ```
 
-**fmt**
+#### fmt
 
 Fails the build if the developer didn't run
 [rustfmt](https://github.com/rust-lang/rustfmt) against the build.
 
-**doc**
+#### doc
 
-Runs [`cargo doc`](https://doc.rust-lang.org/cargo/commands/cargo-doc.html) 
+Runs [`cargo doc`](https://doc.rust-lang.org/cargo/commands/cargo-doc.html)
 on the repo and fails if there are any warnings.
 
-**miri**
+#### miri
 
 I had never heard of [Miri](https://github.com/rust-lang/miri) before I saw it
 in [this example](https://github.com/dtolnay/thiserror/blob/master/.github/workflows/ci.yml),
@@ -114,12 +114,12 @@ but it looks interesting, so why not?
 
 Miri is a heavy test, so it may be wise to remove it.
 
-**outdated**
+#### outdated
 
 Runs the [outdated cargo subcommand](https://github.com/kbknapp/cargo-outdated)
 against the repo. Fails the build if you have any outdated dependencies in your
 project. If you keep the cron schedule, it will check every month to see if any
-of your dependencies are outdated. 
+of your dependencies are outdated.
 
 ## Rust Resources
 
