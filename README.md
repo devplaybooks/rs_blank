@@ -34,10 +34,7 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 
 ## What's in the box?
 
-* Choice of licenses:
-  * [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-  * [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
-  * [MIT License](https://opensource.org/license/mit/)
+* Choice of licenses
 * .rustfmt.toml file
 * GitHub CI Actions
 * GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
@@ -45,6 +42,10 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 ### Licenses
 
 I've added all the licenses I generally use for maximum flexibility.
+
+* [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+* [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+* [MIT License](https://opensource.org/license/mit/)
 
 ### My version of Robbepop's [.rustfmt.toml file](https://gist.github.com/Robbepop/f88d896f859712384039813fab939172)
 
@@ -76,8 +77,7 @@ I recommend that you check them out.
 
 #### test
 
-Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md),
-beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
+Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md), beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
 as well as the 1.72.1 release of Rust.
 
 #### clippy
@@ -114,12 +114,23 @@ but it looks interesting, so why not?
 
 Miri is a heavy test, so it may be wise to remove it.
 
-#### outdated
+#### ~~outdated~~
 
-Runs the [outdated cargo subcommand](https://github.com/kbknapp/cargo-outdated)
+~~Runs the [outdated cargo subcommand](https://github.com/kbknapp/cargo-outdated)
 against the repo. Fails the build if you have any outdated dependencies in your
 project. If you keep the cron schedule, it will check every month to see if any
-of your dependencies are outdated.
+of your dependencies are outdated.~~
+
+Outdated isn't compatible with the Rust 2024 edition. There's an 
+[open issue](https://github.com/kbknapp/cargo-outdated/issues/419) for it.
+
+### Dev Container
+
+The Docker image used is based on Microsoft's 
+[Rust Dev Container image](https://github.com/devcontainers/images/tree/main/src/rust). It includes:
+
+- [Evcxr Rust REPL](https://github.com/evcxr/evcxr/blob/main/evcxr_repl/README.md)
+- [Rustup wasm32-unknown-unknown target](https://doc.rust-lang.org/nightly/rustc/platform-support/wasm32-unknown-unknown.html)
 
 ## Rust Resources
 

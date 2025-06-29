@@ -17,12 +17,14 @@ jobs:
       - name: Scan for vulnerabilities
         run: cargo deny check advisories
 
-  outdated:
-    name: Outdated
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
-    timeout-minutes: 45
-    steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/install@cargo-outdated
-      - run: cargo outdated --workspace --exit-code 1
+# Not supported with Rust 2024 Edition
+# https://github.com/kbknapp/cargo-outdated/issues/419
+#  outdated:
+#    name: Outdated
+#    runs-on: ubuntu-latest
+#    if: github.event_name != 'pull_request'
+#    timeout-minutes: 45
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: dtolnay/install@cargo-outdated
+#      - run: cargo outdated --workspace --exit-code 1
