@@ -38,6 +38,7 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 * .rustfmt.toml file
 * GitHub CI Actions
 * GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
+* [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks
 
 ### Licenses
 
@@ -58,6 +59,34 @@ characters to 100:
 # Default: 80
 max_width = 100
 ```
+
+### Cargo Make
+
+This program uses [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks. Install it with:
+
+```shell
+cargo install cargo-make
+```
+
+The default `cargo make` runs the following tasks:
+
+* `cargo fmt`
+* `cargo clean`
+* `cargo build`
+* `carg test`
+* `cargo clippy` with `clippy::pedantic` lint settings
+* `cargo doc --no-deps`
+
+```shell
+❯ cargo make
+````
+
+To open the generated docs in your browser:
+
+```shell
+❯ cargo make docs
+```
+
 
 ### David Tolnay's [Rust Toolchain GitHub Action](https://github.com/dtolnay/rust-toolchain)
 
