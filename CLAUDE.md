@@ -1,4 +1,4 @@
-# Claude Instructions for pkcore
+# Claude Instructions
 
 These instructions guide Claude to generate code that aligns with our project standards for testing, documentation, and code quality.
 
