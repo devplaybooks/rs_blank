@@ -24,6 +24,17 @@ This template is designed to be
 
 You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
 
+## Table of Contents
+
+- [How to use it](#how-to-use-it)
+- [What's in the box?](#whats-in-the-box)
+  - [Licenses](#licenses)
+  - [My version of Robbepop's .rustfmt.toml file](#my-version-of-robbepops-rustfmttoml-file)
+  - [David Tolnay's Rust Toolchain GitHub Action](#david-tolnays-rust-toolchain-github-action)
+  - [Dev Container](#dev-container)
+  - [AI Assistant Instructions](#ai-assistant-instructions)
+- [Rust Resources](#rust-resources)
+
 ## How to use it
 
 * Use the template. (**Note that your first build will fail because there is no code yet.**)
@@ -160,6 +171,19 @@ The Docker image used is based on Microsoft's
 
 - [Evcxr Rust REPL](https://github.com/evcxr/evcxr/blob/main/evcxr_repl/README.md)
 - [Rustup wasm32-unknown-unknown target](https://doc.rust-lang.org/nightly/rustc/platform-support/wasm32-unknown-unknown.html)
+
+### AI Assistant Instructions
+
+This repository includes instruction files for AI coding assistants. They define project-specific expectations for behavior, code style, and testing.
+
+- [`CLAUDE.md`](./CLAUDE.md) contains instructions used by Claude-compatible tooling.
+- [`.github/copilot-instructions.md`](./.github/copilot-instructions.md) contains repository custom instructions used by GitHub Copilot.
+
+Reference information:
+
+- Claude Code project instructions: <https://docs.anthropic.com/en/docs/claude-code/settings#memory>
+- GitHub Copilot repository custom instructions: <https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions>
+- Markdown reference (CommonMark): <https://spec.commonmark.org/>
 
 ## Rust Resources
 
