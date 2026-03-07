@@ -24,17 +24,6 @@ This template is designed to be
 
 You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
 
-## Table of Contents
-
-- [How to use it](#how-to-use-it)
-- [What's in the box?](#whats-in-the-box)
-  - [Licenses](#licenses)
-  - [My version of Robbepop's .rustfmt.toml file](#my-version-of-robbepops-rustfmttoml-file)
-  - [David Tolnay's Rust Toolchain GitHub Action](#david-tolnays-rust-toolchain-github-action)
-  - [Dev Container](#dev-container)
-  - [AI Assistant Instructions](#ai-assistant-instructions)
-- [Rust Resources](#rust-resources)
-
 ## How to use it
 
 * Use the template. (**Note that your first build will fail because there is no code yet.**)
@@ -48,8 +37,9 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 * Choice of licenses
 * .rustfmt.toml file
 * GitHub CI Actions
+* [cargo-deny](https://crates.io/crates/cargo-deny) dependency graph linter
+* GNU Makefile
 * GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
-* [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks
 
 ### Licenses
 
@@ -71,15 +61,23 @@ characters to 100:
 max_width = 100
 ```
 
-### Cargo Make
+### Makefile
 
-This program uses [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks. Install it with:
+This program includes a [GNU Make](https://www.gnu.org/software/make/) [Makefile](Makefile) of common commands. 
+
+To get all the commands, run:
 
 ```shell
-cargo install cargo-make
+make help
 ```
 
-The default `cargo make` runs the following tasks:
+To run through the full build process, just run:
+
+```shell
+make
+```
+
+The default `make` runs the following tasks:
 
 * `cargo fmt`
 * `cargo clean`
@@ -88,16 +86,11 @@ The default `cargo make` runs the following tasks:
 * `cargo clippy` with `clippy::pedantic` lint settings
 * `cargo doc --no-deps`
 
-```shell
-❯ cargo make
-````
-
 To open the generated docs in your browser:
 
 ```shell
-❯ cargo make docs
+❯ make docs
 ```
-
 
 ### David Tolnay's [Rust Toolchain GitHub Action](https://github.com/dtolnay/rust-toolchain)
 
@@ -187,9 +180,9 @@ Reference information:
 
 ## Rust Resources
 
-* [Rust Programming Language](https://doc.rust-lang.org/book/README.html)
-* [rustup.rs](https://github.com/rust-lang-nursery/rustup.rs)
-* [Cargo Guide](http://doc.crates.io/guide.html)
+* [Rust Programming Language](https://doc.rust-lang.org/book/)
+* [rustup.rs](https://github.com/rust-lang/rustup)
+* [Cargo Guide](https://doc.rust-lang.org/cargo/)
 * [Rust Cookbook](https://rust-lang-nursery.github.io/rust-cookbook/) ([git](https://github.com/rust-lang-nursery/rust-cookbook))
 * [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/index.html)
 * [The Little Book of Rust Books](https://lborb.github.io/book/)
