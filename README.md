@@ -40,7 +40,6 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 * [cargo-deny](https://crates.io/crates/cargo-deny) dependency graph linter
 * GNU Makefile
 * GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
-* [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks
 
 ### Licenses
 

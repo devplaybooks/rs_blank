@@ -1,4 +1,4 @@
-.PHONY: clean build test fmt clippy create_docs ayce default fuck help docs
+.PHONY: clean build test build_test fmt clippy create_docs ayce default fuck help docs
 
 # Default target
 default: ayce
@@ -9,12 +9,13 @@ help:
 	@echo "  make build         - Build the project"
 	@echo "  make clean         - Clean build artifacts"
 	@echo "  make test          - Run tests"
+	@echo "  make build_test    - Clean once, then build and test"
 	@echo "  make fmt           - Format code"
 	@echo "  make clippy        - Run clippy linter"
 	@echo "  make create_docs   - Create documentation"
 	@echo "  make docs          - Create and open documentation in browser"
 	@echo "  make fuck          - Check for inappropriate language"
-	@echo "  make ayce          - Run all checks (fmt → build → test → clippy → create_docs)"
+	@echo "  make ayce          - Run all checks (fmt → build_test → clippy → create_docs)"
 	@echo "  make help          - Display this help message"
 
 # Clean build artifacts
@@ -22,12 +23,15 @@ clean:
 	cargo clean
 
 # Build the project
-build: clean
+build:
 	cargo build
 
 # Run tests
-test: clean
+test:
 	cargo test
+
+# Clean once, then run build + test
+build_test: clean build test
 
 # Format code
 fmt:
@@ -35,7 +39,7 @@ fmt:
 
 # Run clippy linter
 clippy:
-	cargo clippy
+	cargo clippy -- -W clippy::pedantic
 
 # Create documentation
 create_docs:
@@ -50,5 +54,4 @@ fuck:
 	grep -RInE 'fuck|shit|fart|nimrod|schmuck|asshole|stupid' src || true
 
 # All You Can Eat - Run all checks
-ayce: fmt build test clippy create_docs
-
+ayce: fmt build_test clippy create_docs
