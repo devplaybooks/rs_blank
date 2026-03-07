@@ -13,7 +13,7 @@ help:
 	@echo "  make fmt           - Format code"
 	@echo "  make clippy        - Run clippy linter"
 	@echo "  make create_docs   - Create documentation"
-	@echo "  make docs          - Create and open documentation in browser"
+	@echo "  make docs          - Create docs and open in browser (macOS/Linux)"
 	@echo "  make ayce          - Run all checks (fmt → build_test → clippy → create_docs)"
 	@echo "  make help          - Display this help message"
 
@@ -46,7 +46,16 @@ create_docs:
 
 # Open documentation in browser
 docs: create_docs
-	open ./target/doc/____/index.html
+	@DOC_PATH="./target/doc/____/index.html"; \
+	if command -v xdg-open >/dev/null 2>&1; then \
+		xdg-open "$$DOC_PATH"; \
+	elif command -v open >/dev/null 2>&1; then \
+		open "$$DOC_PATH"; \
+	else \
+		echo "No supported opener found (tried xdg-open and open)."; \
+		echo "Open $$DOC_PATH manually."; \
+		exit 1; \
+	fi
 
 # All You Can Eat - Run all checks
 ayce: fmt build_test clippy create_docs

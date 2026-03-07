@@ -63,7 +63,7 @@ max_width = 100
 
 ### Makefile
 
-This program incudes a [GNU Make](https://www.gnu.org/software/make/) [Makefile](Makefile) of common commands. 
+This program includes a [GNU Make](https://www.gnu.org/software/make/) [Makefile](Makefile) of common commands. 
 
 To get all the commands, run:
 
