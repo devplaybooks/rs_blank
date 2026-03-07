@@ -24,17 +24,6 @@ This template is designed to be
 
 You can see an example of it in use at [devplaybooks/rust_blank_example](https://github.com/devplaybooks/rust_blank_example).
 
-## Table of Contents
-
-- [How to use it](#how-to-use-it)
-- [What's in the box?](#whats-in-the-box)
-  - [Licenses](#licenses)
-  - [My version of Robbepop's .rustfmt.toml file](#my-version-of-robbepops-rustfmttoml-file)
-  - [David Tolnay's Rust Toolchain GitHub Action](#david-tolnays-rust-toolchain-github-action)
-  - [Dev Container](#dev-container)
-  - [AI Assistant Instructions](#ai-assistant-instructions)
-- [Rust Resources](#rust-resources)
-
 ## How to use it
 
 * Use the template. (**Note that your first build will fail because there is no code yet.**)
@@ -49,6 +38,7 @@ You can see an example of it in use at [devplaybooks/rust_blank_example](https:/
 * .rustfmt.toml file
 * GitHub CI Actions
 * [cargo-deny](https://crates.io/crates/cargo-deny) dependency graph linter
+* GNU Makefile
 * GitHub [VSCode Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that also acts as an online GitHub Codespace courtesy of [codespaces-examples](https://github.com/codespaces-examples/rust)
 * [cargo make](https://github.com/sagiegurari/cargo-make) to manage tasks
 
