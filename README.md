@@ -82,7 +82,7 @@ The default `make` runs the following tasks:
 * `cargo fmt`
 * `cargo clean`
 * `cargo build`
-* `carg test`
+* `cargo test`
 * `cargo clippy` with `clippy::pedantic` lint settings
 * `cargo doc --no-deps`
 
@@ -111,7 +111,7 @@ I recommend that you check them out.
 #### test
 
 Tests the code against Rust's [stable](https://github.com/rust-lang/rust/blob/master/RELEASES.md), beta, and nightly [channels](https://rust-lang.github.io/rustup/concepts/channels.html),
-as well as the 1.72.1 release of Rust.
+as well as the 1.85.0 release of Rust.
 
 #### clippy
 

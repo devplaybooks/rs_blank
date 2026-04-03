@@ -35,7 +35,6 @@ jobs:
   clippy:
     name: Clippy
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
@@ -48,7 +47,6 @@ jobs:
   fmt:
     name: Fmt
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v6
@@ -71,6 +69,14 @@ jobs:
       - run: cargo doc --no-deps --document-private-items
         env:
           RUSTDOCFLAGS: "-D warnings"
+
+  deny:
+    name: Deny
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v6
+      - uses: EmbarkStudios/cargo-deny-action@v2
 
   miri:
     name: Miri

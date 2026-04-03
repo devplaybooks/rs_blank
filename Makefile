@@ -1,5 +1,7 @@
 .PHONY: default help clean build test build_test fmt clippy update tree tree-duplicates deny audit unused-deps create_docs docs install-tools watch install-watch ayce
 
+CRATE_NAME := $(shell grep '^name' Cargo.toml 2>/dev/null | head -1 | sed 's/.*"\(.*\)".*/\1/' | tr '-' '_')
+
 # Default target
 default: ayce
 
@@ -12,7 +14,7 @@ help:
 	@echo "  make test            - Run tests"
 	@echo "  make build_test      - Clean once, then build and test"
 	@echo "  make clean           - Clean build artifacts"
-	@echo "  make ayce            - Run all checks (fmt -> build_test -> clippy -> create_docs)"
+	@echo "  make ayce            - Run all checks (fmt -> build_test -> clippy -> deny -> create_docs)"
 	@echo ""
 	@echo "Code Quality & Security:"
 	@echo "  make fmt             - Format code"
@@ -57,7 +59,7 @@ fmt:
 
 # Run clippy linter
 clippy:
-	cargo clippy -- -W clippy::pedantic
+	cargo clippy -- -Dclippy::all -Dclippy::pedantic
 
 # Update dependencies
 update:
@@ -95,7 +97,11 @@ create_docs:
 
 # Open documentation in browser
 docs: create_docs
-	@DOC_PATH="./target/doc/____/index.html"; \
+	@if [ -z "$(CRATE_NAME)" ]; then \
+		echo "Error: Could not determine crate name. Have you run 'cargo init'?"; \
+		exit 1; \
+	fi; \
+	DOC_PATH="./target/doc/$(CRATE_NAME)/index.html"; \
 	if command -v xdg-open >/dev/null 2>&1; then \
 		xdg-open "$$DOC_PATH"; \
 	elif command -v open >/dev/null 2>&1; then \
@@ -125,4 +131,4 @@ install-watch:
 
 
 # All You Can Eat - Run all checks
-ayce: fmt build_test clippy create_docs
+ayce: fmt build_test clippy deny create_docs
