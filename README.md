@@ -84,6 +84,7 @@ The default `make` runs the following tasks:
 * `cargo build`
 * `cargo test`
 * `cargo clippy` with `clippy::pedantic` lint settings
+* `cargo deny` checks
 * `cargo doc --no-deps`
 
 To open the generated docs in your browser:

@@ -31,7 +31,7 @@ help:
 	@echo "  make docs            - Create docs and open in browser (macOS/Linux)"
 	@echo ""
 	@echo "Tooling:"
-	@echo "  make install-tools   - Install cargo-deny and cargo-udeps"
+	@echo "  make install-tools   - Install cargo-deny, cargo-udeps, and cargo-watch"
 	@echo "  make watch           - Run check/test in watch mode"
 	@echo "  make install-watch   - Install cargo-watch"
 	@echo ""
@@ -117,6 +117,7 @@ install-tools:
 	@echo "Installing development tools..."
 	cargo install cargo-deny
 	cargo install cargo-udeps
+	cargo install cargo-watch
 	@echo ""
 	@echo "✓ Tools installed!"
 	@echo ""

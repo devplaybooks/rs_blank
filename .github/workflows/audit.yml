@@ -1,11 +1,7 @@
 name: Security audit
 on:
-  schedule: # Every Sunday at 1 AM 
+  schedule: # Every Sunday at 1 AM
     - cron: '0 1 * * 0'
-  push:
-    paths:
-      - '**/Cargo.toml'
-      - '**/Cargo.lock'
 
 jobs:
   security_audit:

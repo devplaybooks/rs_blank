@@ -32,7 +32,7 @@ These instructions guide GitHub Copilot to generate code that aligns with our pr
 ///
 /// # Examples
 /// ```
-/// use pkcore::your_module::YourFunction;
+/// use pkcore::your_module::YourStruct;
 /// let result = your_function(42);
 /// assert_eq!(result, expected_value);
 /// ```
